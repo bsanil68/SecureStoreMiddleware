@@ -65,7 +65,7 @@ func (uc *UploadController) HandleUpload(c *gin.Context) {
 	defer file.Close()
 
 	// Define upload path in Storj bucket
-	uploadPath := filepath.Join(customerID, filename)
+	uploadPath := filepath.Join(customerID, state, filename)
 
 	// Create Storj project
 	ctx := context.Background()
